@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | The Elite Scent</title>
+    <!-- Didot fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Didot&family=Didot+Modern&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand brand-logo fuente-vieja" href="index.html">The Elite Scent</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="productos.html">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <section id="productos">
+            <h2 class="text-center mb-4">Nuestros Perfumes</h2>
+            <form id="filtros" class="mb-4">
+                <div class="mb-3">
+                    <strong>Género</strong><br>
+                    <label class="me-3"><input type="checkbox" name="gender" value="hombre"> Hombre</label>
+                    <label class="me-3"><input type="checkbox" name="gender" value="mujer"> Mujer</label>
+                    <label class="me-3"><input type="checkbox" name="gender" value="unisex"> Unisex</label>
+                </div>
+                <div class="mb-3">
+                    <strong>Tipo</strong><br>
+                    <label class="me-3"><input type="checkbox" name="type" value="dulce"> Dulce</label>
+                    <label class="me-3"><input type="checkbox" name="type" value="suave"> Suave</label>
+                    <label class="me-3"><input type="checkbox" name="type" value="fuerte"> Fuerte</label>
+                </div>
+            </form>
+
+            <div id="cards" class="row g-4">
+                <!-- 10 sample cards -->
+                <div class="col-12">
+                    <div class="card-estilo-nuevo" data-gender="hombre" data-type="dulce">
+                        <img src="assets/imagen_prueba1.jpeg" alt="Perfume A">
+                        <div class="card-body-nuevo">
+                            <h3>Perfume A</h3>
+                            <p>Descripción breve.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card-estilo-nuevo" data-gender="mujer" data-type="suave">
+                        <img src="assets/imagen_prueba1.jpeg" alt="Perfume B">
+                        <div class="card-body-nuevo">
+                            <h3>Perfume B</h3>
+                            <p>Descripción breve.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card-estilo-nuevo" data-gender="unisex" data-type="fuerte">
+                        <img src="assets/imagen_prueba1.jpeg" alt="Perfume C">
+                        <div class="card-body-nuevo">
+                            <h3>Perfume C</h3>
+                            <p>Descripción breve.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card-estilo-nuevo" data-gender="hombre" data-type="suave">
+                        <img src="assets/imagen_prueba1.jpeg" alt="Perfume D">
+                        <div class="card-body-nuevo">
+                            <h3>Perfume D</h3>
+                            <p>Descripción breve.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card-estilo-nuevo" data-gender="mujer" data-type="dulce">
+                        <img src="assets/imagen_prueba1.jpeg" alt="Perfume E">
+                        <div class="card-body-nuevo">
+                            <h3>Perfume E</h3>
+                            <p>Descripción breve.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card-estilo-nuevo" data-gender="unisex" data-type="suave">
+                        <img src="assets/imagen_prueba1.jpeg" alt="Perfume F">
+                        <div class="card-body-nuevo">
+                            <h3>Perfume F</h3>
+                            <p>Descripción breve.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card-estilo-nuevo" data-gender="hombre" data-type="fuerte">
+                        <img src="assets/imagen_prueba1.jpeg" alt="Perfume G">
+                        <div class="card-body-nuevo">
+                            <h3>Perfume G</h3>
+                            <p>Descripción breve.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card-estilo-nuevo" data-gender="mujer" data-type="fuerte">
+                        <img src="assets/imagen_prueba1.jpeg" alt="Perfume H">
+                        <div class="card-body-nuevo">
+                            <h3>Perfume H</h3>
+                            <p>Descripción breve.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card-estilo-nuevo" data-gender="unisex" data-type="dulce">
+                        <img src="assets/imagen_prueba1.jpeg" alt="Perfume I">
+                        <div class="card-body-nuevo">
+                            <h3>Perfume I</h3>
+                            <p>Descripción breve.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="card-estilo-nuevo" data-gender="hombre" data-type="dulce">
+                        <img src="assets/imagen_prueba1.jpeg" alt="Perfume J">
+                        <div class="card-body-nuevo">
+                            <h3>Perfume J</h3>
+                            <p>Descripción breve.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-light text-dark text-center py-4 border-top">
+        <p class="mb-0">© 2026 Desarrollado por <a href="TU_IG" class="fw-bold text-dark">Poulain Studio</a></p>
+    </footer>
+
+    <script>
+        // basic filtering logic
+        const filtros = document.getElementById('filtros');
+        filtros.addEventListener('change', () => {
+            const selectedGenders = Array.from(filtros.querySelectorAll('input[name="gender"]:checked')).map(i => i.value);
+            const selectedTypes = Array.from(filtros.querySelectorAll('input[name="type"]:checked')).map(i => i.value);
+            document.querySelectorAll('#cards .card-estilo-nuevo').forEach(card => {
+                const gender = card.dataset.gender;
+                const type = card.dataset.type;
+                let show = true;
+                if (selectedGenders.length) {
+                    show = selectedGenders.includes(gender);
+                }
+                if (show && selectedTypes.length) {
+                    show = selectedTypes.includes(type);
+                }
+                card.parentElement.style.display = show ? '' : 'none';
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

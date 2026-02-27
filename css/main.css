@@ -1,30 +1,37 @@
 /* Custom styles for The Elite Scent */
 
+/* typography */
+body {
+    font-family: 'Didot Modern', serif;
+}
+
+.fuente-vieja {
+    font-family: 'Didot', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.fuente-elegante {
+    font-family: 'Didot Modern', serif;
+    font-size: 2.5rem;
+}
+
 .logo {
     max-width: 150px;
     height: auto;
 }
 
-.fuente-elegante {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-}
-
-.fuente-vieja {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 1.5rem;
-}
-
+/* card styles */
 .card-estilo-nuevo {
-    border: 1px solid #ddd;
+    border: 1px solid #000;
     border-radius: 8px;
     overflow: hidden;
     background: #fff;
-    transition: transform .2s;
+    transition: transform .2s, box-shadow .2s;
 }
 .card-estilo-nuevo:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 .card-estilo-nuevo img {
     width: 100%;
@@ -35,6 +42,7 @@
     text-align: center;
 }
 
+/* buttons */
 .boton-negro-dorado {
     display: inline-block;
     background: #000;
@@ -51,10 +59,22 @@
     font-size: 1.1rem;
 }
 
+/* history text */
 .historia p {
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
+}
+
+/* stylish hamburger */
+.navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.75rem;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    width: 30px;
+    height: 24px;
 }
 
 /*# sourceMappingURL=main.css.map */
