@@ -12,12 +12,23 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand brand-logo" href="index.html">The Elite Scent</a>
+            <a class="navbar-brand brand-logo fuente-vieja" href="index.html">The Elite Scent</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="productos.html">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <header class="hero-perfume text-center d-flex align-items-center justify-content-center">
+    <header class="hero-perfume text-center d-flex align-items-center justify-content-center flex-column">
         <div class="container">
+            <img src="assets/logo.svg" alt="Logo The Elite Scent" class="logo mb-4">
             <h1 class="fuente-elegante">Siente la Distinción</h1>
             <p class="lead text-dark">Fragancias de lujo que perduran.</p>
         </div>
@@ -62,10 +73,26 @@
                     </div>
                 </div>
 
+                <div class="col-11">
+                    <div class="card-estilo-nuevo">
+                        <img src="assets/imagen_prueba1.jpeg" alt="Perfume 4">
+                        <div class="card-body-nuevo">
+                            <h3>Black Opium</h3>
+                            <p>Aromática y seductora</p>
+                            <a href="#" class="boton-negro-dorado">Consultar</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <div class="text-center mt-5">
-                <a href="productos.html" class="boton-negro-dorado grande">Ver Catálogo Completo</a>
+                <a href="productos.html" class="boton-negro-dorado grande">Ver Catálogo</a>
+            </div>
+
+            <div class="historia mt-5">
+                <h2 class="text-center mb-4">Nuestra Historia</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
         </section>
     </main>
