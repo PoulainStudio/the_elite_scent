@@ -1,0 +1,16 @@
+// Estilos de las tarjetas de perfume
+.card {
+    background-color: #1a1a1a !important; // Negro un poquito más claro para resaltar
+    border: 1px solid $color-dorado !important;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
+    }
+
+    img {
+        height: 250px;
+        object-fit: cover; // Para que las fotos no se deformen
+    }
+}
