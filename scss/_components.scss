@@ -14,3 +14,32 @@
         object-fit: cover; // Para que las fotos no se deformen
     }
 }
+
+// Quitar el color azul de todos los links por defecto
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+// Fondo con textura para que no sea un negro liso aburrido
+body {
+    background: radial-gradient(circle at top, #1a1a1a 0%, #000000 100%);
+}
+
+// Mejora de las Cards
+.card {
+    background: rgba(255, 255, 255, 0.03); // Fondo casi transparente
+    backdrop-filter: blur(10px); // Efecto esmerilado premium
+    border: 1px solid rgba(197, 160, 89, 0.2) !important;
+    border-radius: 0; // Bordes rectos son más elegantes
+    
+    .card-img-top {
+        filter: grayscale(30%); // Un toque artístico
+        transition: 0.5s;
+    }
+
+    &:hover {
+        border-color: $color-dorado !important;
+        .card-img-top { filter: grayscale(0%); }
+    }
+}
