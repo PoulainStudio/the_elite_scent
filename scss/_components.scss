@@ -1,45 +1,80 @@
-// Estilos de las tarjetas de perfume
-.card {
-    background-color: #1a1a1a !important; // Negro un poquito más claro para resaltar
+.brand-logo {
+    font-family: 'Architects Daughter', cursive !important;
+    font-size: 1.8rem;
+    color: $color-dorado !important;
+}
+
+body {
+    background: radial-gradient(circle at top, #1a1a1a 0%, #000000 100%) !important;
+    color: $color-secundario !important;
+    font-family: $fuente-cuerpo;
+}
+
+a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.btn-dorado {
+    display: inline-block;
+    padding: 10px 25px;
     border: 1px solid $color-dorado !important;
-    transition: transform 0.3s ease;
+    background-color: transparent !important;
+    color: $color-dorado !important;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
 
     &:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
-    }
-
-    img {
-        height: 250px;
-        object-fit: cover; // Para que las fotos no se deformen
+        background-color: $color-dorado !important;
+        color: #000 !important;
+        box-shadow: 0 0 15px rgba(197, 160, 89, 0.4);
     }
 }
 
-// Quitar el color azul de todos los links por defecto
-a {
-    text-decoration: none;
-    color: inherit;
+.btn-dorado-grande {
+    @extend .btn-dorado;
+    padding: 15px 40px;
+    width: 90%;
+    max-width: 350px;
+    font-weight: bold;
 }
 
-// Fondo con textura para que no sea un negro liso aburrido
-body {
-    background: radial-gradient(circle at top, #1a1a1a 0%, #000000 100%);
-}
-
-// Mejora de las Cards
 .card {
-    background: rgba(255, 255, 255, 0.03); // Fondo casi transparente
-    backdrop-filter: blur(10px); // Efecto esmerilado premium
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(197, 160, 89, 0.2) !important;
-    border-radius: 0; // Bordes rectos son más elegantes
+    border-radius: 0;
+    margin-bottom: 20px;
     
     .card-img-top {
-        filter: grayscale(30%); // Un toque artístico
+        height: 300px;
+        object-fit: cover;
+        filter: grayscale(20%);
         transition: 0.5s;
+    }
+
+    h3 {
+        color: $color-dorado;
+        margin-top: 15px;
+    }
+
+    p {
+        color: #b0b0b0;
     }
 
     &:hover {
         border-color: $color-dorado !important;
-        .card-img-top { filter: grayscale(0%); }
+        .card-img-top {
+            filter: grayscale(0%);
+        }
     }
+}
+
+.hero-perfume {
+    min-height: 50vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('../assets/fondo-hero.jpg');
+    background-size: cover;
+    background-position: center;
 }
