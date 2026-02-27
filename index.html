@@ -10,78 +10,68 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container justify-content-center">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+        <div class="container">
             <a class="navbar-brand brand-logo" href="index.html">The Elite Scent</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="productos.html">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <header class="hero-perfume text-center text-white d-flex align-items-center justify-content-center">
+    <header class="hero-perfume text-center d-flex align-items-center justify-content-center">
         <div class="container">
-            <img src="assets/tu-logo.png" alt="Logo Perfumería" class="img-fluid mb-3" style="max-height: 150px;">
-            <h1 class="display-5">Siente la Distinción</h1>
-            <p class="lead">Fragancias de lujo que perduran más de 10 horas.</p>
+            <img src="assets/tu-logo.png" alt="Logo" class="img-fluid mb-3" style="max-height: 120px;">
+            <h1 class="display-5 text-dark">Siente la Distinción</h1>
+            <p class="lead text-dark">Fragancias de lujo que perduran.</p>
         </div>
     </header>
 
     <main class="container my-5">
         <section id="destacados" class="text-center mb-5">
-            <h2 class="mb-5">Fragancias Destacadas</h2>
+            <h2 class="mb-5 text-dark">Fragancias Destacadas</h2>
             <div class="row g-4 justify-content-center">
                 <div class="col-10 col-md-4">
-                    <div class="card h-100">
+                    <div class="card h-100 card-custom">
                         <img src="assets/imagen_prueba1.jpeg" class="card-img-top" alt="Perfume 1">
                         <div class="card-body d-flex flex-column">
-                            <h3 class="h5">Nombre Fragancia</h3>
-                            <p class="small flex-grow-1">Inspirado en marcas de lujo</p>
-                            <a href="https://wa.me/LINK_DE_WHATSAPP" class="btn-dorado">Consultar</a>
+                            <h3 class="h5 text-dark">Nombre Fragancia</h3>
+                            <p class="small text-muted flex-grow-1">Inspirado en marcas de lujo</p>
+                            <a href="https://wa.me/NUMERO" class="btn-cuadrado-dorado">Consultar</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-10 col-md-4">
-                    <div class="card h-100">
-                        <img src="assets/imagen_prueba1.jpeg" class="card-img-top" alt="Perfume 2">
-                        <div class="card-body d-flex flex-column">
-                            <h3 class="h5">Nombre Fragancia</h3>
-                            <p class="small flex-grow-1">Aroma intenso y duradero</p>
-                            <a href="https://wa.me/LINK_DE_WHATSAPP" class="btn-dorado">Consultar</a>
-                        </div>
-                    </div>
                 </div>
-                <div class="col-10 col-md-4">
-                    <div class="card h-100">
-                        <img src="assets/imagen_prueba1.jpeg" class="card-img-top" alt="Perfume 3">
-                        <div class="card-body d-flex flex-column">
-                            <h3 class="h5">Nombre Fragancia</h3>
-                            <p class="small flex-grow-1">Larga duración garantizada</p>
-                            <a href="https://wa.me/LINK_DE_WHATSAPP" class="btn-dorado">Consultar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="mt-5">
-                <a href="productos.html" class="btn-dorado-grande">Ver Catálogo Completo</a>
+                <a href="productos.html" class="btn-cuadrado-dorado btn-lg">Ver Catálogo Completo</a>
             </div>
         </section>
 
-        <section class="historia py-5 border-top border-secondary">
+        <section class="historia py-5 border-top">
             <div class="row align-items-center g-4 text-center">
                 <div class="col-12 col-md-6">
-                    <img src="assets/imagen_pruebaequipo2.jpeg" class="img-fluid rounded shadow-lg" alt="Nuestro Equipo">
+                    <img src="assets/imagen_pruebaequipo2.jpeg" class="img-fluid rounded shadow" alt="Nosotros">
                 </div>
                 <div class="col-12 col-md-6">
-                    <h2 class="mb-4">Nuestra Historia</h2>
-                    <p class="text-light">Un emprendimiento que nació de la pasión por los aromas y la calidad accesible. Ubicados en puntos estratégicos para entregas rápidas y seguras.</p>
+                    <h2 class="mb-4 text-dark">Nuestra Historia</h2>
+                    <p class="text-dark">Pasión por los aromas y la calidad accesible.</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-black text-white text-center py-4">
-        <p class="mb-0">Envíos a domicilio y puntos de encuentro</p>
-        <p class="mb-0 small">© 2026 Desarrollado por <a href="TU_IG" class="text-warning">Poulain Studio</a></p>
+    <footer class="bg-light text-dark text-center py-4 border-top">
+        <p class="mb-0">© 2026 Desarrollado por <a href="TU_IG" class="fw-bold text-dark">Poulain Studio</a></p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
