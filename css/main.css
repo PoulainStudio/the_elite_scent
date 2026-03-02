@@ -98,6 +98,17 @@ body {
     line-height: 1.6;
 }
 
+/* carousel styling */
+#heroCarousel .carousel-item img {
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+}
+#heroCarousel {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
 /* navbar and hamburger styling */
 .nav-link { color: var(--text); }
 .nav-link:hover { color: var(--gold); }

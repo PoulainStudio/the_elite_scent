@@ -184,19 +184,27 @@
             });
         });
 
-        // detail view using the existing card element
+        // detail view: clone selected card into standalone display
         function showDetail(id){
-            const card = document.querySelector(`.card-estilo-nuevo[data-id="${id}"]`);
-            if(!card) return;
-            // remove Consult link if present
-            const btn = card.querySelector('a.boton-negro-dorado');
+            const source = document.querySelector(`.card-estilo-nuevo[data-id="${id}"]`);
+            if(!source) return;
+            const clone = source.cloneNode(true);
+            // remove its consult link
+            const btn = clone.querySelector('a.boton-negro-dorado');
             if(btn) btn.remove();
-            // add back button below
+            // add back button
             const back = document.createElement('a');
             back.href = 'productos.html';
             back.className = 'boton-negro-dorado mt-3';
             back.textContent = 'Volver al catálogo';
-            card.querySelector('.card-body-nuevo').appendChild(back);
+            clone.querySelector('.card-body-nuevo').appendChild(back);
+            // clear existing cards and insert clone centered
+            const cardsContainer = document.getElementById('cards');
+            cardsContainer.innerHTML = '';
+            const wrapper = document.createElement('div');
+            wrapper.className = 'col-12 d-flex justify-content-center';
+            wrapper.appendChild(clone);
+            cardsContainer.appendChild(wrapper);
         }
 
         const params = new URLSearchParams(window.location.search);
@@ -205,12 +213,6 @@
             showDetail(pid);
             // hide filters
             document.getElementById('filtros').style.display='none';
-            // hide all cards except the matching one
-            document.querySelectorAll('#cards .card-estilo-nuevo').forEach(c=>{
-                if(c.dataset.id !== pid){
-                    c.parentElement.style.display='none';
-                }
-            });
         }
         
 
