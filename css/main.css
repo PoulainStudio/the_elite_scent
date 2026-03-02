@@ -38,7 +38,6 @@ body {
     background: #fff;
     transition: transform .2s, box-shadow .2s, border-color .2s;
     position: relative;
-    max-height: 320px;
 }
 .card-estilo-nuevo::before{
     content: '';
