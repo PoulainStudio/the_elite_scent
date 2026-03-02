@@ -38,6 +38,7 @@ body {
     background: #fff;
     transition: transform .2s, box-shadow .2s, border-color .2s;
     position: relative;
+    max-height: 320px;
 }
 .card-estilo-nuevo::before{
     content: '';
@@ -59,6 +60,13 @@ body {
 .card-body-nuevo {
     padding: 1rem;
     text-align: center;
+}
+
+.card-body-nuevo .tipo {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--gold-dark);
+    margin: .5rem 0;
 }
 
 /* buttons */
@@ -94,6 +102,16 @@ body {
 .nav-link { color: var(--text); }
 .nav-link:hover { color: var(--gold); }
 .navbar-collapse { background: #fff; }
+
+/* contact page accents */
+.contact-info strong { color: var(--gold-dark); }
+.contact-info a { color: var(--gold); text-decoration: underline; }
+.contact-info a:hover { color: var(--gold-dark); }
+
+input.form-control:focus, textarea.form-control:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 0.2rem rgba(212,175,55,0.25);
+}
 
 .navbar-toggler {
     border: none;
