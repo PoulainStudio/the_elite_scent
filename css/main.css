@@ -16,7 +16,7 @@ body {
     font-family: 'Didot', serif;
     font-weight: 700;
     font-size: 1.5rem;
-    color: var(--gold);
+    color: #000;
 }
 
 .fuente-elegante {
@@ -26,7 +26,7 @@ body {
 }
 
 .logo {
-    max-width: 150px;
+    max-width: 200px;
     height: auto;
 }
 
@@ -113,9 +113,12 @@ body {
 }
 
 /* navbar and hamburger styling */
-.nav-link { color: var(--text); }
+.navbar-collapse {
+    background: #fff;
+    padding: 1rem 0;
+}
+.nav-link { color: var(--text); padding: 0.5rem 0; }
 .nav-link:hover { color: var(--gold); }
-.navbar-collapse { background: #fff; }
 
 /* contact page accents */
 .contact-info strong { color: var(--gold-dark); }
