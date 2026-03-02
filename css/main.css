@@ -82,6 +82,10 @@ body {
     box-shadow: 0 2px 6px rgba(212,175,55,0.06);
     transition: box-shadow .18s, transform .12s, color .12s;
 }
+
+.card-body-nuevo .boton-negro-dorado {
+    margin-top: .75rem;
+}
 .boton-negro-dorado:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(212,175,55,0.22);
