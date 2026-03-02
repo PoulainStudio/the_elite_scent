@@ -184,35 +184,47 @@
             });
         });
 
-        // detail view: clone selected card into standalone display
+        // data for all perfumes
+        const perfumes = {
+            perfume1: {name:'Sauvage Dior', img:'assets/imagen_prueba1.jpeg', desc:'Inspirado en marcas de lujo', strength:'Fuerte'},
+            perfume2: {name:'Invictus', img:'assets/imagen_prueba1.jpeg', desc:'Aroma intenso y duradero', strength:'Suave'},
+            perfume3: {name:'One Million', img:'assets/imagen_prueba1.jpeg', desc:'Larga duración garantizada', strength:'Suave'},
+            perfume4: {name:'Perfume D', img:'assets/imagen_prueba1.jpeg', desc:'Descripción breve.', strength:'Suave'},
+            perfume5: {name:'Perfume E', img:'assets/imagen_prueba1.jpeg', desc:'Descripción breve.', strength:'Dulce'},
+            perfume6: {name:'Perfume F', img:'assets/imagen_prueba1.jpeg', desc:'Descripción breve.', strength:'Suave'},
+            perfume7: {name:'Perfume G', img:'assets/imagen_prueba1.jpeg', desc:'Descripción breve.', strength:'Fuerte'},
+            perfume8: {name:'Perfume H', img:'assets/imagen_prueba1.jpeg', desc:'Descripción breve.', strength:'Fuerte'},
+            perfume9: {name:'Perfume I', img:'assets/imagen_prueba1.jpeg', desc:'Descripción breve.', strength:'Dulce'},
+            perfume10: {name:'Perfume J', img:'assets/imagen_prueba1.jpeg', desc:'Descripción breve.', strength:'Dulce'}
+        };
+
         function showDetail(id){
-            const source = document.querySelector(`.card-estilo-nuevo[data-id="${id}"]`);
-            if(!source) return;
-            const clone = source.cloneNode(true);
-            // remove its consult link
-            const btn = clone.querySelector('a.boton-negro-dorado');
-            if(btn) btn.remove();
-            // add back button
-            const back = document.createElement('a');
-            back.href = 'productos.html';
-            back.className = 'boton-negro-dorado mt-3';
-            back.textContent = 'Volver al catálogo';
-            clone.querySelector('.card-body-nuevo').appendChild(back);
-            // clear existing cards and insert clone centered
+            const data = perfumes[id];
+            if(!data) return;
+            // update heading
+            document.querySelector('#productos h2').textContent = data.name;
+            // clear filters and cards
+            document.getElementById('filtros').style.display = 'none';
             const cardsContainer = document.getElementById('cards');
-            cardsContainer.innerHTML = '';
-            const wrapper = document.createElement('div');
-            wrapper.className = 'col-12 d-flex justify-content-center';
-            wrapper.appendChild(clone);
-            cardsContainer.appendChild(wrapper);
+            cardsContainer.innerHTML = `
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="card-estilo-nuevo" style="max-width:400px;">
+                        <img src="${data.img}" alt="${data.name}">
+                        <div class="card-body-nuevo">
+                            <h3>${data.name}</h3>
+                            <p>${data.desc}</p>
+                            <p class="tipo">${data.strength}</p>
+                            <a href="productos.html" class="boton-negro-dorado mt-3">Volver al catálogo</a>
+                        </div>
+                    </div>
+                </div>
+            `;
         }
 
         const params = new URLSearchParams(window.location.search);
         const pid = params.get('id');
         if(pid){
             showDetail(pid);
-            // hide filters
-            document.getElementById('filtros').style.display='none';
         }
         
 
