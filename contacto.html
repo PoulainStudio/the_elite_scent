@@ -53,6 +53,7 @@
                     <div class="mb-3">
                         <label for="mensaje" class="form-label">Mensaje</label>
                         <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje"></textarea>
+                        <div id="forbiddenWarning" class="text-danger mt-2" style="display:none; font-size:0.9rem;"></div>
                     </div>
                     <button type="submit" class="boton-negro-dorado">Enviar mensaje</button>
                 </form>
@@ -72,25 +73,41 @@
                 'coño','culiao','culo','estúpido','estupida','forro','forra','gilipollas','hijo de puta','hdp','idiota',
                 'imbécil','joder','malpari','maricon','mierda','nazi','orto','pajero','paja','pendejo','pendeja',
                 'pelotudo','pelotuda','perra','poronga','porn','puta','puto','ramera','sorete','tarado','tarada',
-                'verga','viagra','zorra'
+                'verga','viagra','zorra','basura','bestia','bruto','canalla','cenutrio','chamuco','chanfaina','chaparron',
+                'chaqueador','charnego','charro','chascarrillo','chaval','chavalas','chavalo','chaveta','chayotero',
+                'chayotera','chechimeco','chechimeca','chechelete'
             ];
             const form = document.getElementById('contactForm');
             const mensaje = document.getElementById('mensaje');
             const errorDiv = document.getElementById('formError');
+            const warningDiv = document.getElementById('forbiddenWarning');
 
-            function containsForbidden(text){
+            function detectForbidden(text){
                 const t = text.toLowerCase();
+                const detected = new Set();
                 for(const word of forbidden){
-                    const regex = new RegExp('\\b'+word.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\b','i');
-                    if(regex.test(t)) return true;
+                    if(t.includes(word.toLowerCase())) detected.add(word);
                 }
-                return false;
+                return Array.from(detected);
             }
 
+            // real-time detection while typing
+            mensaje.addEventListener('input', function(){
+                const detected = detectForbidden(this.value);
+                if(detected.length > 0){
+                    warningDiv.innerHTML = '<u>Palabras no permitidas detectadas:</u> <span style="color:#d32f2f; font-weight:bold;">' + detected.join(', ') + '</span>';
+                    warningDiv.style.display = '';
+                } else {
+                    warningDiv.style.display = 'none';
+                }
+            });
+
+            // form submission validation
             form.addEventListener('submit', function(e){
                 errorDiv.style.display='none';
                 const val = mensaje.value||'';
-                if(containsForbidden(val)){
+                const detected = detectForbidden(val);
+                if(detected.length > 0){
                     e.preventDefault();
                     errorDiv.textContent = 'No es posible enviar este mensaje porque contiene términos no permitidos.';
                     errorDiv.style.display = '';
